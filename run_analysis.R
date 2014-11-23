@@ -70,4 +70,6 @@ complete$activity <- NULL
 mdata <- melt(complete, id= c("subject", "activitydesc"))
 completemeans <- dcast(mdata, subject + activitydesc ~ variable, mean)
 
+# Save the output as a txt document titled "output.txt"
 
+write.table(completemeans, output.txt, row.name = FALSE)
